@@ -1,5 +1,8 @@
 package com.example.gugymformation;
 
+//Final Project
+//By Eric Av and Aaron Dodge
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
