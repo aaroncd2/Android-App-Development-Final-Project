@@ -31,7 +31,7 @@
         android:layout_margin="20dp"
         android:textSize="24dp"
         android:alpha=".8"
-        android:text="workout gallery info"/>
+        android:text="facility information"/>
 
     <Button
         android:id="@+id/workoutButton"
@@ -41,7 +41,7 @@
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
         android:layout_margin="20dp"
-        android:textSize="24dp"
+        android:textSize="20dp"
         android:alpha=".8"
         android:text="my workout/create workout"/>
 
