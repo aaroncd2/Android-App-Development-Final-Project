@@ -19,7 +19,7 @@
         android:layout_margin="20dp"
         android:textSize="24dp"
         android:alpha=".8"
-        android:text="hours"/>
+        android:text="hours of operations"/>
 
     <Button
         android:id="@+id/infoButton"
@@ -31,7 +31,7 @@
         android:layout_margin="20dp"
         android:textSize="24dp"
         android:alpha=".8"
-        android:text="workout button"/>
+        android:text="workout gallery info"/>
 
     <Button
         android:id="@+id/workoutButton"
@@ -43,6 +43,6 @@
         android:layout_margin="20dp"
         android:textSize="24dp"
         android:alpha=".8"
-        android:text="my workout"/>
+        android:text="my workout/create workout"/>
 
 </GridLayout>

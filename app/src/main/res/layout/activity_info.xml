@@ -1,9 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InfoActivity">
+    android:background="@color/colorPrimary"
+    tools:context=".InfoActivity"
+    android:columnCount="2">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/infoMainText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:layout_row="0"
+        android:layout_columnSpan="2"
+        android:layout_rowWeight="0.3"
+        android:layout_columnWeight="2"
+        android:layout_gravity="fill_horizontal"
+        android:layout_margin="10dp"
+        android:text="Workout Information Gallery"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/infoView1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onButtonClick"
+        android:layout_columnSpan="1"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:tag="0"
+        />
+    <ImageView
+        android:id="@+id/infoView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onButtonClick"
+        android:layout_columnSpan="1"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:tag="1"
+        />
+    <ImageView
+        android:id="@+id/infoView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onButtonClick"
+        android:layout_columnSpan="1"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:tag="2"
+        />
+    <ImageView
+        android:id="@+id/infoView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onButtonClick"
+        android:layout_columnSpan="1"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:tag="3"
+        />
+    <ImageView
+        android:id="@+id/infoView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onButtonClick"
+        android:layout_columnSpan="1"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:tag="4"
+        />
+    <ImageView
+        android:id="@+id/infoView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onButtonClick"
+        android:layout_columnSpan="1"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:tag="5"
+        />
+    <Button
+        android:id="@+id/quitButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onButtonClick"
+        android:layout_columnSpan="2"
+        android:layout_rowWeight=".5"
+        android:layout_columnWeight="1"
+        android:layout_margin="10dp"
+        android:text="back"
+        />
+
+
+</GridLayout>
