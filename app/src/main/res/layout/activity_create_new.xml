@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary"
     android:orientation="vertical"
     tools:context=".CreateNewActivity">
 
@@ -24,22 +25,189 @@
         android:layout_marginBottom="20dp"
         />
 
-    <ToggleButton
+    <CheckBox
         android:id="@+id/bicepCurls"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bicep Curls"
-        android:visibility="gone"
-        android:textOn="Included"
-        android:textOff="Not Included"/>
+        android:textSize="20sp"
+        android:visibility="gone" />
 
-    <ToggleButton
+    <CheckBox
+        android:id="@+id/hammerCurls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hammer Curls"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/seatedDumbbellPress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seated Dumbbell Press"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/skullcrusher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skullcrusher"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/tricepsPushdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Triceps Pushdown"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
         android:id="@+id/barbellRow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Barbell Row"
-        android:visibility="gone"
-        android:textOn="Included"
-        android:textOff="Not Included"/>
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/back2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK 2"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/back3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK 3"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/back4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK 4"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/back5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK 5"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/cardio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CARDIO 1"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/cardio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CARDIO 2"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/cardio3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CARDIO 3"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/chest1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHEST 1"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/chest2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHEST 2"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/chest3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHEST 3"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/legs1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LEGS 1"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/legs2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LEGS 2"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/legs3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LEGS 3"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/shoulders1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHOULDERS 1"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/shoulders2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHOULDERS 2"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/shoulders3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHOULDERS 3"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text="DONE"/>
 
 </LinearLayout>

@@ -65,12 +65,52 @@ public class CreateNewActivity extends AppCompatActivity {
                 String selected = types.get(position);
                 switch (selected){
                     case "Arms":
-                        findViewById(R.id.bicepCurls).setVisibility(View.VISIBLE);
-                        findViewById(R.id.barbellRow).setVisibility(View.GONE);
+                        toggleArmsVisibility(1);
+                        toggleBackVisibility(0);
+                        toggleCardioVisibility(0);
+                        toggleChestVisibility(0);
+                        toggleLegsVisibility(0);
+                        toggleShouldersVisibility(0);
                         break;
                     case "Back":
-                        findViewById(R.id.barbellRow).setVisibility(View.VISIBLE);
-                        findViewById(R.id.bicepCurls).setVisibility(View.GONE);
+                        toggleArmsVisibility(0);
+                        toggleBackVisibility(1);
+                        toggleCardioVisibility(0);
+                        toggleChestVisibility(0);
+                        toggleLegsVisibility(0);
+                        toggleShouldersVisibility(0);
+                        break;
+                    case "Cardio":
+                        toggleArmsVisibility(0);
+                        toggleBackVisibility(0);
+                        toggleCardioVisibility(1);
+                        toggleChestVisibility(0);
+                        toggleLegsVisibility(0);
+                        toggleShouldersVisibility(0);
+                        break;
+                    case "Chest":
+                        toggleArmsVisibility(0);
+                        toggleBackVisibility(0);
+                        toggleCardioVisibility(0);
+                        toggleChestVisibility(1);
+                        toggleLegsVisibility(0);
+                        toggleShouldersVisibility(0);
+                        break;
+                    case "Legs":
+                        toggleArmsVisibility(0);
+                        toggleBackVisibility(0);
+                        toggleCardioVisibility(0);
+                        toggleChestVisibility(0);
+                        toggleLegsVisibility(1);
+                        toggleShouldersVisibility(0);
+                        break;
+                    case "Shoulders":
+                        toggleArmsVisibility(0);
+                        toggleBackVisibility(0);
+                        toggleCardioVisibility(0);
+                        toggleChestVisibility(0);
+                        toggleLegsVisibility(0);
+                        toggleShouldersVisibility(1);
                         break;
                     default:
                         break;
@@ -82,5 +122,85 @@ public class CreateNewActivity extends AppCompatActivity {
                 // does not happen
             }
         });
+    }
+
+    private void toggleArmsVisibility(int mode){
+        if(mode == 1){ // set visible
+            findViewById(R.id.bicepCurls).setVisibility(View.VISIBLE);
+            findViewById(R.id.hammerCurls).setVisibility(View.VISIBLE);
+            findViewById(R.id.seatedDumbbellPress).setVisibility(View.VISIBLE);
+            findViewById(R.id.skullcrusher).setVisibility(View.VISIBLE);
+            findViewById(R.id.tricepsPushdown).setVisibility(View.VISIBLE);
+        } else { // set invisible
+            findViewById(R.id.bicepCurls).setVisibility(View.GONE);
+            findViewById(R.id.hammerCurls).setVisibility(View.GONE);
+            findViewById(R.id.seatedDumbbellPress).setVisibility(View.GONE);
+            findViewById(R.id.skullcrusher).setVisibility(View.GONE);
+            findViewById(R.id.tricepsPushdown).setVisibility(View.GONE);
+        }
+    }
+
+    private void toggleBackVisibility(int mode){
+        if(mode == 1){ // set visible
+            findViewById(R.id.barbellRow).setVisibility(View.VISIBLE);
+            findViewById(R.id.back2).setVisibility(View.VISIBLE);
+            findViewById(R.id.back3).setVisibility(View.VISIBLE);
+            findViewById(R.id.back4).setVisibility(View.VISIBLE);
+            findViewById(R.id.back5).setVisibility(View.VISIBLE);
+        } else { // set invisible
+            findViewById(R.id.barbellRow).setVisibility(View.GONE);
+            findViewById(R.id.back2).setVisibility(View.GONE);
+            findViewById(R.id.back3).setVisibility(View.GONE);
+            findViewById(R.id.back4).setVisibility(View.GONE);
+            findViewById(R.id.back5).setVisibility(View.GONE);
+        }
+    }
+
+    private void toggleCardioVisibility(int mode){
+        if(mode == 1){ // set visible
+            findViewById(R.id.cardio1).setVisibility(View.VISIBLE);
+            findViewById(R.id.cardio2).setVisibility(View.VISIBLE);
+            findViewById(R.id.cardio3).setVisibility(View.VISIBLE);
+        } else { // set invisible
+            findViewById(R.id.cardio1).setVisibility(View.GONE);
+            findViewById(R.id.cardio2).setVisibility(View.GONE);
+            findViewById(R.id.cardio3).setVisibility(View.GONE);
+        }
+    }
+
+    private void toggleChestVisibility(int mode){
+        if(mode == 1){ // set visible
+            findViewById(R.id.chest1).setVisibility(View.VISIBLE);
+            findViewById(R.id.chest2).setVisibility(View.VISIBLE);
+            findViewById(R.id.chest3).setVisibility(View.VISIBLE);
+        } else { // set invisible
+            findViewById(R.id.chest1).setVisibility(View.GONE);
+            findViewById(R.id.chest2).setVisibility(View.GONE);
+            findViewById(R.id.chest3).setVisibility(View.GONE);
+        }
+    }
+
+    private void toggleLegsVisibility(int mode){
+        if(mode == 1){ // set visible
+            findViewById(R.id.legs1).setVisibility(View.VISIBLE);
+            findViewById(R.id.legs2).setVisibility(View.VISIBLE);
+            findViewById(R.id.legs3).setVisibility(View.VISIBLE);
+        } else { // set invisible
+            findViewById(R.id.legs1).setVisibility(View.GONE);
+            findViewById(R.id.legs2).setVisibility(View.GONE);
+            findViewById(R.id.legs3).setVisibility(View.GONE);
+        }
+    }
+
+    private void toggleShouldersVisibility(int mode){
+        if(mode == 1){ // set visible
+            findViewById(R.id.shoulders1).setVisibility(View.VISIBLE);
+            findViewById(R.id.shoulders2).setVisibility(View.VISIBLE);
+            findViewById(R.id.shoulders3).setVisibility(View.VISIBLE);
+        } else { // set invisible
+            findViewById(R.id.shoulders1).setVisibility(View.GONE);
+            findViewById(R.id.shoulders2).setVisibility(View.GONE);
+            findViewById(R.id.shoulders3).setVisibility(View.GONE);
+        }
     }
 }
