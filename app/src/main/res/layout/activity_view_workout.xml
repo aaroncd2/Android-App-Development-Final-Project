@@ -5,18 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPrimary"
-    tools:context=".WorkoutActivity">
-
-    <Button
-        android:id="@+id/addNewButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ADD NEW WORKOUT"
-        android:textSize="24sp" />
+    tools:context=".ViewWorkoutActivity">
 
     <ListView
-        android:id="@+id/workoutList"
+        android:id="@+id/exercisesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/backButton"
+        android:text="BACK"
         android:layout_gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

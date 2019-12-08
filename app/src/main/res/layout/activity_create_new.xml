@@ -9,6 +9,7 @@
     tools:context=".CreateNewActivity">
 
     <EditText
+        android:id="@+id/titleEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -26,7 +27,7 @@
         />
 
     <CheckBox
-        android:id="@+id/bicepCurls"
+        android:id="@+id/arms1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bicep Curls"
@@ -34,7 +35,7 @@
         android:visibility="gone" />
 
     <CheckBox
-        android:id="@+id/hammerCurls"
+        android:id="@+id/arms2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hammer Curls"
@@ -42,7 +43,7 @@
         android:visibility="gone" />
 
     <CheckBox
-        android:id="@+id/seatedDumbbellPress"
+        android:id="@+id/arms3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Seated Dumbbell Press"
@@ -50,7 +51,7 @@
         android:visibility="gone" />
 
     <CheckBox
-        android:id="@+id/skullcrusher"
+        android:id="@+id/arms4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Skullcrusher"
@@ -58,7 +59,7 @@
         android:visibility="gone" />
 
     <CheckBox
-        android:id="@+id/tricepsPushdown"
+        android:id="@+id/arms5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Triceps Pushdown"
@@ -66,7 +67,7 @@
         android:visibility="gone" />
 
     <CheckBox
-        android:id="@+id/barbellRow"
+        android:id="@+id/back1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Barbell Row"
@@ -77,7 +78,7 @@
         android:id="@+id/back2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BACK 2"
+        android:text="Chin Up"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -85,23 +86,7 @@
         android:id="@+id/back3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BACK 3"
-        android:textSize="20sp"
-        android:visibility="gone" />
-
-    <CheckBox
-        android:id="@+id/back4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BACK 4"
-        android:textSize="20sp"
-        android:visibility="gone" />
-
-    <CheckBox
-        android:id="@+id/back5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BACK 5"
+        android:text="Deadlift"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -109,7 +94,7 @@
         android:id="@+id/cardio1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CARDIO 1"
+        android:text="Indoor Track"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -117,7 +102,7 @@
         android:id="@+id/cardio2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CARDIO 2"
+        android:text="Treadmill"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -125,7 +110,7 @@
         android:id="@+id/cardio3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CARDIO 3"
+        android:text="Stationary Bike"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -133,7 +118,7 @@
         android:id="@+id/chest1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CHEST 1"
+        android:text="Bench Press"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -141,7 +126,7 @@
         android:id="@+id/chest2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CHEST 2"
+        android:text="Dumbbell Press"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -149,7 +134,7 @@
         android:id="@+id/chest3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CHEST 3"
+        android:text="Incline Bench Press"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -157,7 +142,7 @@
         android:id="@+id/legs1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LEGS 1"
+        android:text="Leg Press"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -165,7 +150,7 @@
         android:id="@+id/legs2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LEGS 2"
+        android:text="Squats"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -173,7 +158,7 @@
         android:id="@+id/legs3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LEGS 3"
+        android:text="Calf Raises"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -181,7 +166,7 @@
         android:id="@+id/shoulders1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SHOULDERS 1"
+        android:text="Shoulder Press"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -189,7 +174,7 @@
         android:id="@+id/shoulders2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SHOULDERS 2"
+        android:text="Barbell Row"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -197,7 +182,7 @@
         android:id="@+id/shoulders3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SHOULDERS 3"
+        android:text="Side Lateral Raise"
         android:textSize="20sp"
         android:visibility="gone" />
 

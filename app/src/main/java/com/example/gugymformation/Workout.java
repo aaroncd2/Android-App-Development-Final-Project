@@ -2,9 +2,10 @@ package com.example.gugymformation;
 
 import android.widget.ArrayAdapter;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Workout {
+public class Workout implements Serializable {
     private String name;
     private ArrayList<Exercise> exercises;
 

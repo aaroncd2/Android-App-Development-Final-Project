@@ -1,6 +1,8 @@
 package com.example.gugymformation;
 
-public class Exercise {
+import java.io.Serializable;
+
+public class Exercise implements Serializable {
     private String name;
     private String type;
     private int image;
