@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:columnCount="1"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/gonzaga_pic"
+    android:alpha="0.9"
     tools:context=".MainActivity">
 
     <Button
@@ -18,7 +19,7 @@
         android:layout_columnWeight="1"
         android:layout_margin="20dp"
         android:textSize="24dp"
-        android:alpha=".8"
+        android:alpha=".9"
         android:text="hours of operations"/>
 
     <Button
@@ -30,7 +31,7 @@
         android:layout_columnWeight="1"
         android:layout_margin="20dp"
         android:textSize="24dp"
-        android:alpha=".8"
+        android:alpha=".9"
         android:text="facility information"/>
 
     <Button
@@ -42,7 +43,7 @@
         android:layout_columnWeight="1"
         android:layout_margin="20dp"
         android:textSize="20dp"
-        android:alpha=".8"
+        android:alpha=".9"
         android:text="my workout/create workout"/>
 
 </GridLayout>

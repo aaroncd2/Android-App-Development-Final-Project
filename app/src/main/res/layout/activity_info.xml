@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/gonzaga_pic"
+    android:alpha="0.9"
     tools:context=".InfoActivity"
     android:columnCount="2">
 
     <TextView
         android:id="@+id/infoMainText"
+        android:background="@color/white"
+        android:alpha="0.9"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center_horizontal"
@@ -24,6 +27,7 @@
 
     <ImageView
         android:id="@+id/infoView1"
+        android:alpha="0.9"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="onButtonClick"
@@ -36,6 +40,7 @@
         />
     <ImageView
         android:id="@+id/infoView2"
+        android:alpha="0.9"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="onButtonClick"
@@ -48,6 +53,7 @@
         />
     <ImageView
         android:id="@+id/infoView3"
+        android:alpha="0.9"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="onButtonClick"
@@ -60,6 +66,7 @@
         />
     <ImageView
         android:id="@+id/infoView4"
+        android:alpha="0.9"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="onButtonClick"
@@ -72,6 +79,7 @@
         />
     <ImageView
         android:id="@+id/infoView5"
+        android:alpha="0.9"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="onButtonClick"
@@ -84,6 +92,7 @@
         />
     <ImageView
         android:id="@+id/infoView6"
+        android:alpha="0.9"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="onButtonClick"
@@ -96,6 +105,7 @@
         />
     <Button
         android:id="@+id/quitButton"
+        android:alpha="0.9"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="onButtonClick"

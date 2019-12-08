@@ -14,11 +14,12 @@ import android.widget.Toast;
 
 public class DisplayInfoActivity extends AppCompatActivity implements  AdapterView.OnItemSelectedListener {
     String[] bicepTricep = {"Bicep Workout", "Tricep Workout"};
-    String[] chest = {"Workout 1", "Workout 2"};
-    String[] back = {"Workout 1", "Workout 2"};
-    String[] legs = {"Workout 1", "Workout 2"};
-    String[] shoulders = {"Workout 1", "Workout 2"};
-    String[] cardio = {"Running", "Cycling", "Swimming"};
+    String[] chest = {"Chest Workouts"};
+    String[] back = {"Back Workouts"};
+    String[] legs = {"Leg Workouts"};
+    String[] shoulders = {"Shoulder Workouts"};
+    String[] cardio = {"Running", "Basketball", "Swimming"};
+
     char position = ' ';
 
     @Override
@@ -62,11 +63,11 @@ public class DisplayInfoActivity extends AppCompatActivity implements  AdapterVi
                 spin.setAdapter(bicepTricepAdapter);
                 textView.setText("Bicep and Triceps");
                 imageView.setImageResource(R.drawable.bicep_gym);
-                imageView2.setImageResource(R.drawable.bicep_picture);
                 break;
             case '1':
                 spin.setAdapter(backAdapter);
                 textView.setText("Back");
+                imageView.setImageResource(R.drawable.chest_gym);
                 break;
             case '2':
                 spin.setAdapter(chestAdapter);
@@ -76,10 +77,12 @@ public class DisplayInfoActivity extends AppCompatActivity implements  AdapterVi
             case '3':
                 spin.setAdapter(legsAdapter);
                 textView.setText("Legs");
+                imageView.setImageResource(R.drawable.legs_gym);
                 break;
             case '4':
                 spin.setAdapter(shouldersAdapter);
                 textView.setText("Shoulders");
+                imageView.setImageResource(R.drawable.bicep_gym);
                 break;
             case '5':
                 spin.setAdapter(cardioAdapter);
@@ -94,9 +97,47 @@ public class DisplayInfoActivity extends AppCompatActivity implements  AdapterVi
 
     @Override
     public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
+        onSelectedSpinner();
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> arg0) {
+    }
+
+    public void onSelectedSpinner(){
+        ImageView imagePictureView = (ImageView) findViewById(R.id.displayInfoDetails);
+        Spinner spinner = (Spinner) findViewById(R.id.displayInfoSpinner);
+        String selection = spinner.getSelectedItem().toString();
+        switch (selection){
+            case "Bicep Workout":
+                imagePictureView.setImageResource(R.drawable.bicep_workouts);
+                break;
+            case "Tricep Workout":
+                imagePictureView.setImageResource(R.drawable.tricep_workouts);
+                break;
+            case "Chest Workouts":
+                imagePictureView.setImageResource(R.drawable.chest_workouts);
+                break;
+            case "Back Workouts":
+                imagePictureView.setImageResource(R.drawable.back_workouts);
+                break;
+            case "Leg Workouts":
+                imagePictureView.setImageResource(R.drawable.leg_workouts);
+                break;
+            case "Shoulder Workouts":
+                imagePictureView.setImageResource(R.drawable.shoulder_workouts);
+                break;
+            case "Running":
+                imagePictureView.setImageResource(R.drawable.running_workouts);
+                break;
+            case "Basketball":
+                imagePictureView.setImageResource(R.drawable.basketball_workouts);
+                break;
+            case"Swimming":
+                imagePictureView.setImageResource(R.drawable.swimming_workouts);
+                break;
+            default:
+                break;
+        };
     }
 }

@@ -18,6 +18,10 @@ package com.example.gugymformation;
 //https://www.gonzaga.edu/student-life/health-well-being/rudolf-fitness-center
 //https://www.gonzaga.edu/student-life/health-well-being/rudolf-fitness-center/aquatics
 //https://www.gonzagabulletin.com/news/communication-students-examine-comfortability-by-gender-in-rfc/article_5816d318-6b9a-11e9-b5e8-6f49f0722743.html
+// https://www.gonzaga.edu/student-life/health-well-being/rudolf-fitness-center
+// https://www.gonzaga.edu/student-life/health-well-being/rudolf-fitness-center/aquatics
+// https://www.flickr.com/photos/gonzagauniversity/6190355946/
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;

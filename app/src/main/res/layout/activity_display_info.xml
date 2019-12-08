@@ -5,12 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DisplayInfoActivity"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/gonzaga_pic"
+    android:alpha="0.8"
     android:padding="10dp"
     android:columnCount="2">
 
     <TextView
         android:id="@+id/displayInfoName"
+        android:background="@color/white"
+        android:alpha="0.9"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center_horizontal"
@@ -34,6 +37,8 @@
 
     <Spinner
         android:id="@+id/displayInfoSpinner"
+        android:background="@color/white"
+        android:alpha="0.85"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_columnSpan="2"
