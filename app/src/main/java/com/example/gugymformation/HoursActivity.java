@@ -11,16 +11,29 @@ import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 
 public class HoursActivity extends AppCompatActivity {
     final String TAG = "HoursActivityTag";
+    Document document;
+    Elements tables;
+    ArrayList<Hours> normalHours = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hours);
+
+        HoursAPI hoursAPI = new HoursAPI(this);
+        hoursAPI.FetchHours();
 
         ArrayList<String> locations = new ArrayList<>();
         locations.add("Gym");
@@ -43,7 +56,6 @@ public class HoursActivity extends AppCompatActivity {
                 // do nothing
             }
         });
-
     }
 
     private void setHours(){
@@ -53,22 +65,46 @@ public class HoursActivity extends AppCompatActivity {
         switch (selection){
             case "Gym":
                 String gymHours = "";
-                gymHours += "Monday - Thursday...: 6am - 11pm\n";
-                gymHours += "Friday..............: 6am - 10pm\n";
-                gymHours += "Saturday............: 9am - 6pm\n";
-                gymHours += "Sunday..............: 9am - 10pm\n";
+                for(int i = 0; i < normalHours.size(); i++){
+                    gymHours += normalHours.get(i).getDayOfWeek() + ": " + normalHours.get(i).getGymHours() + "\n";
+                }
                 hoursView.setText(gymHours);
                 break;
             case "Pool":
                 String hours = "";
-                hours += "Monday - Thursday...: 6 - 8am, 11am - 10pm\n";
-                hours += "Friday..............: 6 - 8am, 11am - 9pm\n";
-                hours += "Saturday............: 11am - 5pm\n";
-                hours += "Sunday..............: 11am - 9pm\n";
+                for(int i = 0; i < normalHours.size(); i++){
+                    hours += normalHours.get(i).getDayOfWeek() + ": " + normalHours.get(i).getPoolHours() + "\n";
+                }
                 hoursView.setText(hours);
                 break;
             default:
                 break;
         };
+    }
+
+    public void receiveDocument(Document document){
+        this.document = document;
+        this.tables = getHoursTables(this.document);
+        buildNormalHours(this.tables.eq(0));
+    }
+
+    private Elements getHoursTables(Document doc){
+        Log.d(TAG, "getting hours");
+        Elements tables = doc.select("tbody");
+        //Log.d(TAG,tables.eq(0).toString());
+        //Log.d(TAG,tables.eq(1).toString());
+        return tables;
+    }
+
+    private void buildNormalHours(Elements table){
+        Elements rows = table.select("tr");
+        Log.d(TAG, "SIZE OF ROWS " + rows.size());
+        for(int i = 1; i < rows.size(); i++){
+            Elements cells = rows.eq(i).select("td");
+            String days = cells.eq(0).html();
+            String gym = cells.eq(1).html();
+            String pool = cells.eq(2).html();
+            normalHours.add(new Hours(days, gym, pool));
+        }
     }
 }
