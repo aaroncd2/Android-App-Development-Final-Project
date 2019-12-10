@@ -84,7 +84,7 @@ public class ViewWorkoutActivity extends AppCompatActivity {
             Log.d(TAG, strings.get(i) +"|");
             Cursor cursor = openHelper.getExerciseCursor(strings.get(i));
             int index = cursor.getColumnIndex("imageResource");
-            Log.d(TAG, index + "");
+            Log.d(TAG, index + "the column");
             cursor.moveToFirst();
             int image = cursor.getInt(index);
             Log.d(TAG, "image int is: " + image);

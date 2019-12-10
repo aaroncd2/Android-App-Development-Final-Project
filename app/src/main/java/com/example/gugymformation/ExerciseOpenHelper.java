@@ -44,7 +44,7 @@ public class ExerciseOpenHelper extends SQLiteOpenHelper {
                 ", 'Isolation Bicep Curls', 'Arms', " + R.drawable.bicep_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Skullcrusher', 'Arms', " + R.drawable.bicep_icon + ")";
+                ", 'Skullcrushers', 'Arms', " + R.drawable.bicep_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
                 ", 'Triceps Dumbbell Rows', 'Arms', " + R.drawable.bicep_icon + ")";
