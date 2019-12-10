@@ -4,6 +4,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class WorkoutOpenHelper extends SQLiteOpenHelper {
     static final String DATABASE_NAME = "workoutDatabase";
@@ -43,6 +47,51 @@ public class WorkoutOpenHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL(sqlInsert);
         db.close();
+    }
+
+    public void deleteIndividualNote(int id)
+    {
+        String sqlUpdate = "DELETE FROM " + TABLE_WORKOUTS + " WHERE " + ID + " = " + id;
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL(sqlUpdate);
+        db.close();
+    }
+
+    public void deleteAllNotes() {
+        String sqlDelete = "DELETE FROM " + TABLE_WORKOUTS;
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL(sqlDelete);
+        db.close();
+    }
+
+    public Cursor getAllNotes()
+    {
+        String sqlSelect = "SELECT * FROM " + TABLE_WORKOUTS;
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery(sqlSelect, null);
+        return cursor;
+    }
+
+    public Cursor getSelectAllWorkoutsCursor() {
+        String sqlSelect = "SELECT * FROM " + TABLE_WORKOUTS;
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery(sqlSelect, null);
+        return cursor;
+    }
+
+    public List<Workout> getSelectAllNotesList() {
+        List<Workout> workoutList = new ArrayList<>();
+
+        Cursor cursor = getSelectAllWorkoutsCursor();
+        while (cursor.moveToNext())
+        {
+            int id = cursor.getInt(0);
+            String name = cursor.getString(1);
+            ArrayList<Exercise> exercise = new ArrayList<>();
+            Workout workout = new Workout(id, name, exercise);
+            workoutList.add(workout);
+        }
+        return workoutList;
     }
 
     @Override

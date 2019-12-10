@@ -106,6 +106,7 @@ public class DisplayInfoActivity extends AppCompatActivity implements  AdapterVi
 
     public void onSelectedSpinner(){
         ImageView imagePictureView = (ImageView) findViewById(R.id.displayInfoDetails);
+        ImageView imageView = (ImageView) findViewById(R.id.displayInfoImage);
         Spinner spinner = (Spinner) findViewById(R.id.displayInfoSpinner);
         String selection = spinner.getSelectedItem().toString();
         switch (selection){
@@ -128,12 +129,15 @@ public class DisplayInfoActivity extends AppCompatActivity implements  AdapterVi
                 imagePictureView.setImageResource(R.drawable.shoulder_workouts);
                 break;
             case "Running":
+                imageView.setImageResource(R.drawable.running_gym);
                 imagePictureView.setImageResource(R.drawable.running_workouts);
                 break;
             case "Basketball":
+                imageView.setImageResource(R.drawable.basketball_gym);
                 imagePictureView.setImageResource(R.drawable.basketball_workouts);
                 break;
             case"Swimming":
+                imageView.setImageResource(R.drawable.pool_gym);
                 imagePictureView.setImageResource(R.drawable.swimming_workouts);
                 break;
             default:

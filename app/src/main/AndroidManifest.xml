@@ -12,10 +12,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ViewWorkoutActivity"></activity>
         <activity android:name=".CreateNewActivity" />
-        <activity
-            android:name=".WorkoutActivity"
-            android:label="@string/title_activity_workout"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".WorkoutActivity"/>
         <activity android:name=".DisplayInfoActivity" />
         <activity android:name=".InfoActivity" />
         <activity android:name=".HoursActivity" />
