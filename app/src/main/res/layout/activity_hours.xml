@@ -21,19 +21,6 @@
         android:textSize="24dp"
         android:text="GYM STATUS: "/>
 
-    <TextView
-        android:id="@+id/poolStatusTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp"
-        android:background="#444444"
-        android:textColor="#FFFFFF"
-        android:alpha=".8"
-        android:gravity="center"
-        android:textSize="24dp"
-        android:text="POOL STATUS: "/>
-
     <Spinner
         android:id="@+id/choiceSpinner"
         android:layout_width="wrap_content"
