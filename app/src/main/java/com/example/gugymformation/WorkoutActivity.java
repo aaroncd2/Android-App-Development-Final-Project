@@ -28,6 +28,7 @@ import java.util.ArrayList;
 
 public class WorkoutActivity extends AppCompatActivity {
     static final int LOGIN_REQUEST_CODE = 1;
+    public String titleFromResult;
     final WorkoutOpenHelper openHelper = new WorkoutOpenHelper(this);
     CursorAdapter cursorAdapter;
     String TAG = "WorkoutActivityTag: ";
@@ -113,7 +114,9 @@ public class WorkoutActivity extends AppCompatActivity {
                 Log.d(TAG, "before getting item:");
                 SQLiteCursor cursor = (SQLiteCursor) parent.getItemAtPosition(position);
                 ArrayList<String> exerciseNames = parseExercisesString(cursor);
+                String nameTitle = parseName(cursor);
                 Intent intent = new Intent(WorkoutActivity.this, ViewWorkoutActivity.class);
+                intent.putExtra("Title", nameTitle);
                 intent.putExtra("Exercises", exerciseNames);
                 startActivity(intent);
             }
@@ -124,10 +127,10 @@ public class WorkoutActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 1){
-            String title = data.getStringExtra("Title");
+            titleFromResult = data.getStringExtra("Title");
             ArrayList<Exercise> exercises = (ArrayList<Exercise>) data.getSerializableExtra("Exercises");
             String exercisesString = buildExercisesEntry(exercises);
-            openHelper.insertWorkout(title, exercisesString);
+            openHelper.insertWorkout(titleFromResult, exercisesString);
             Cursor cursor = openHelper.getAllWorkoutsCursor();
             cursorAdapter.changeCursor(cursor);
         }
@@ -151,6 +154,12 @@ public class WorkoutActivity extends AppCompatActivity {
             exercises.add(temp[i]);
         }
         return exercises;
+    }
+
+    private String parseName(SQLiteCursor cursor)
+    {
+        String title = cursor.getString(cursor.getColumnIndex("name"));
+        return  title;
     }
 
     @Override

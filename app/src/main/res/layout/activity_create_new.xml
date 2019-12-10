@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
     android:orientation="vertical"
+    android:background="@drawable/gonzaga_pic"
     tools:context=".CreateNewActivity">
 
     <EditText
@@ -13,6 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:alpha="0.9"
         android:gravity="center_horizontal"
         android:textSize="24sp"
         android:hint="Workout Name"
@@ -23,6 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:alpha="0.8"
         android:layout_marginBottom="20dp"
         />
 
@@ -30,6 +34,8 @@
         android:id="@+id/arms1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
         android:text="Bicep Curls"
         android:textSize="20sp"
         android:visibility="gone" />
@@ -38,6 +44,8 @@
         android:id="@+id/arms2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
         android:text="Hammer Curls"
         android:textSize="20sp"
         android:visibility="gone" />
@@ -46,7 +54,9 @@
         android:id="@+id/arms3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Seated Dumbbell Press"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Isolation Bicep Curls"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -54,7 +64,9 @@
         android:id="@+id/arms4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Skullcrusher"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Skullcrushers"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -62,7 +74,19 @@
         android:id="@+id/arms5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Triceps Pushdown"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Triceps Dumbbell Rows"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/arms6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Tricep Dumbbell Extension"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -70,7 +94,9 @@
         android:id="@+id/back1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Barbell Row"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Deadlift"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -78,7 +104,9 @@
         android:id="@+id/back2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chin Up"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Dumbbell Deadlift"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -86,31 +114,128 @@
         android:id="@+id/back3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Deadlift"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Dumbbell Back Rows"
+        android:textSize="20sp"
+        android:visibility="gone" />
+    <CheckBox
+        android:id="@+id/back4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Pull ups"
         android:textSize="20sp"
         android:visibility="gone" />
 
     <CheckBox
-        android:id="@+id/cardio1"
+        android:id="@+id/running1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Indoor Track"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Mile Intervals"
         android:textSize="20sp"
         android:visibility="gone" />
 
     <CheckBox
-        android:id="@+id/cardio2"
+        android:id="@+id/running2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Treadmill"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Timed Intervals"
         android:textSize="20sp"
         android:visibility="gone" />
 
     <CheckBox
-        android:id="@+id/cardio3"
+        android:id="@+id/running3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stationary Bike"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Outdoor Run"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/swimming1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Distance Intervals"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/swimming2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Distance Intervals"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/swimming3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Speed Intervals"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/swimming4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Stroke Intervals"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/basketball1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Pickup Basketball"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/basketball2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Shooting Session"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/basketball3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Layup Drills"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/basketball4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Dribble Work"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -118,7 +243,9 @@
         android:id="@+id/chest1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bench Press"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Chest Bench"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -126,7 +253,9 @@
         android:id="@+id/chest2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dumbbell Press"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Chest Incline"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -134,7 +263,18 @@
         android:id="@+id/chest3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Incline Bench Press"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Dumbbell Chest Bench"
+        android:textSize="20sp"
+        android:visibility="gone" />
+    <CheckBox
+        android:id="@+id/chest4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Dumbbell Chest Incline"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -142,7 +282,9 @@
         android:id="@+id/legs1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Leg Press"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Squat"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -150,7 +292,9 @@
         android:id="@+id/legs2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Squats"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Dumbbell Squat"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -158,7 +302,28 @@
         android:id="@+id/legs3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calf Raises"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Alternating Leg Squats"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/legs4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Hamstring Machine"
+        android:textSize="20sp"
+        android:visibility="gone" />
+    <CheckBox
+        android:id="@+id/legs5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Leg Press Machine"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -166,7 +331,9 @@
         android:id="@+id/shoulders1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Shoulder Press"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Dumbbell Shoulder Press"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -174,7 +341,9 @@
         android:id="@+id/shoulders2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Barbell Row"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Upright Barbell Row"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -182,7 +351,18 @@
         android:id="@+id/shoulders3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
         android:text="Side Lateral Raise"
+        android:textSize="20sp"
+        android:visibility="gone" />
+    <CheckBox
+        android:id="@+id/shoulders4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:text="Side Cable Raise"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -190,6 +370,8 @@
         android:id="@+id/doneButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:alpha="0.9"
         android:layout_gravity="bottom"
         android:gravity="center"
         android:textSize="24sp"

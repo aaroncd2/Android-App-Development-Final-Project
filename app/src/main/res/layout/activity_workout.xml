@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/gonzaga_pic"
     tools:context=".WorkoutActivity">
 
     <Button
         android:id="@+id/addNewButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:alpha=".9"
         android:text="ADD NEW WORKOUT"
         android:textSize="24sp" />
 
@@ -19,6 +20,8 @@
         android:id="@+id/workoutList"
         android:layout_gravity="center_horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.9"/>
 
 </LinearLayout>

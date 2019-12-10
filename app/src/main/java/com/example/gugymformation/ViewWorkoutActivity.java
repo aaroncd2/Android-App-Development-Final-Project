@@ -21,6 +21,8 @@ import java.util.ArrayList;
 public class ViewWorkoutActivity extends AppCompatActivity {
     ExerciseOpenHelper openHelper = new ExerciseOpenHelper(this);
     String TAG = "ViewWorkoutActivityTag: ";
+    public int imageForTwo;
+    String title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,10 @@ public class ViewWorkoutActivity extends AppCompatActivity {
         openHelper.populateTable();
 
         Intent intent = getIntent();
+        if(intent!= null)
+        {
+            title = intent.getStringExtra("Title");
+        }
         Log.d(TAG, "Before intent");
         final ArrayList<String> exerciseStrings = (ArrayList<String>) intent.getSerializableExtra("Exercises");
         Log.d(TAG, "After intent");
@@ -57,6 +63,9 @@ public class ViewWorkoutActivity extends AppCompatActivity {
         };
         listView.setAdapter(arrayAdapter);
 
+        TextView titleTextView = (TextView) findViewById(R.id.titleTextView);
+        titleTextView.setText(title);
+
         Button back = findViewById(R.id.backButton);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,9 +84,10 @@ public class ViewWorkoutActivity extends AppCompatActivity {
             Log.d(TAG, strings.get(i) +"|");
             Cursor cursor = openHelper.getExerciseCursor(strings.get(i));
             int index = cursor.getColumnIndex("imageResource");
-            Log.d(TAG, index+"");
+            Log.d(TAG, index + "");
             cursor.moveToFirst();
             int image = cursor.getInt(index);
+            Log.d(TAG, "image int is: " + image);
             exercises.add(image);
         }
         return exercises;

@@ -30,13 +30,17 @@ public class CreateNewActivity extends AppCompatActivity {
         final ArrayList<String> types = new ArrayList<>();
         types.add("Arms");
         types.add("Back");
-        types.add("Cardio");
+        types.add("Running");
+        types.add("Swimming");
+        types.add("Basketball");
         types.add("Chest");
         types.add("Legs");
         types.add("Shoulders");
         final ArrayList<Integer> icons = new ArrayList<>();
         icons.add(R.drawable.bicep_icon);
         icons.add(R.drawable.back_icon);
+        icons.add(R.drawable.cardio_icon);
+        icons.add(R.drawable.cardio_icon);
         icons.add(R.drawable.cardio_icon);
         icons.add(R.drawable.chest_icon);
         icons.add(R.drawable.legs_icon);
@@ -72,7 +76,9 @@ public class CreateNewActivity extends AppCompatActivity {
                     case "Arms":
                         toggleArmsVisibility(1);
                         toggleBackVisibility(0);
-                        toggleCardioVisibility(0);
+                        toggleRunningVisibility(0);
+                        toggleSwimmingVisibility(0);
+                        toggleBasketballVisibility(0);
                         toggleChestVisibility(0);
                         toggleLegsVisibility(0);
                         toggleShouldersVisibility(0);
@@ -80,15 +86,39 @@ public class CreateNewActivity extends AppCompatActivity {
                     case "Back":
                         toggleArmsVisibility(0);
                         toggleBackVisibility(1);
-                        toggleCardioVisibility(0);
+                        toggleRunningVisibility(0);
+                        toggleSwimmingVisibility(0);
+                        toggleBasketballVisibility(0);
                         toggleChestVisibility(0);
                         toggleLegsVisibility(0);
                         toggleShouldersVisibility(0);
                         break;
-                    case "Cardio":
+                    case "Running":
                         toggleArmsVisibility(0);
                         toggleBackVisibility(0);
-                        toggleCardioVisibility(1);
+                        toggleRunningVisibility(1);
+                        toggleSwimmingVisibility(0);
+                        toggleBasketballVisibility(0);
+                        toggleChestVisibility(0);
+                        toggleLegsVisibility(0);
+                        toggleShouldersVisibility(0);
+                        break;
+                    case "Swimming":
+                        toggleArmsVisibility(0);
+                        toggleBackVisibility(0);
+                        toggleRunningVisibility(0);
+                        toggleSwimmingVisibility(1);
+                        toggleBasketballVisibility(0);
+                        toggleChestVisibility(0);
+                        toggleLegsVisibility(0);
+                        toggleShouldersVisibility(0);
+                        break;
+                    case "Basketball":
+                        toggleArmsVisibility(0);
+                        toggleBackVisibility(0);
+                        toggleRunningVisibility(0);
+                        toggleSwimmingVisibility(0);
+                        toggleBasketballVisibility(1);
                         toggleChestVisibility(0);
                         toggleLegsVisibility(0);
                         toggleShouldersVisibility(0);
@@ -96,7 +126,9 @@ public class CreateNewActivity extends AppCompatActivity {
                     case "Chest":
                         toggleArmsVisibility(0);
                         toggleBackVisibility(0);
-                        toggleCardioVisibility(0);
+                        toggleRunningVisibility(0);
+                        toggleSwimmingVisibility(0);
+                        toggleBasketballVisibility(0);
                         toggleChestVisibility(1);
                         toggleLegsVisibility(0);
                         toggleShouldersVisibility(0);
@@ -104,7 +136,9 @@ public class CreateNewActivity extends AppCompatActivity {
                     case "Legs":
                         toggleArmsVisibility(0);
                         toggleBackVisibility(0);
-                        toggleCardioVisibility(0);
+                        toggleRunningVisibility(0);
+                        toggleSwimmingVisibility(0);
+                        toggleBasketballVisibility(0);
                         toggleChestVisibility(0);
                         toggleLegsVisibility(1);
                         toggleShouldersVisibility(0);
@@ -112,7 +146,9 @@ public class CreateNewActivity extends AppCompatActivity {
                     case "Shoulders":
                         toggleArmsVisibility(0);
                         toggleBackVisibility(0);
-                        toggleCardioVisibility(0);
+                        toggleRunningVisibility(0);
+                        toggleSwimmingVisibility(0);
+                        toggleBasketballVisibility(0);
                         toggleChestVisibility(0);
                         toggleLegsVisibility(0);
                         toggleShouldersVisibility(1);
@@ -155,12 +191,14 @@ public class CreateNewActivity extends AppCompatActivity {
             findViewById(R.id.arms3).setVisibility(View.VISIBLE);
             findViewById(R.id.arms4).setVisibility(View.VISIBLE);
             findViewById(R.id.arms5).setVisibility(View.VISIBLE);
+            findViewById(R.id.arms6).setVisibility(View.VISIBLE);
         } else { // set invisible
             findViewById(R.id.arms1).setVisibility(View.GONE);
             findViewById(R.id.arms2).setVisibility(View.GONE);
             findViewById(R.id.arms3).setVisibility(View.GONE);
             findViewById(R.id.arms4).setVisibility(View.GONE);
             findViewById(R.id.arms5).setVisibility(View.GONE);
+            findViewById(R.id.arms6).setVisibility(View.GONE);
         }
     }
 
@@ -176,15 +214,42 @@ public class CreateNewActivity extends AppCompatActivity {
         }
     }
 
-    private void toggleCardioVisibility(int mode){
+    private void toggleRunningVisibility(int mode){
         if(mode == 1){ // set visible
-            findViewById(R.id.cardio1).setVisibility(View.VISIBLE);
-            findViewById(R.id.cardio2).setVisibility(View.VISIBLE);
-            findViewById(R.id.cardio3).setVisibility(View.VISIBLE);
+            findViewById(R.id.running1).setVisibility(View.VISIBLE);
+            findViewById(R.id.running2).setVisibility(View.VISIBLE);
+            findViewById(R.id.running3).setVisibility(View.VISIBLE);
         } else { // set invisible
-            findViewById(R.id.cardio1).setVisibility(View.GONE);
-            findViewById(R.id.cardio2).setVisibility(View.GONE);
-            findViewById(R.id.cardio3).setVisibility(View.GONE);
+            findViewById(R.id.running1).setVisibility(View.GONE);
+            findViewById(R.id.running2).setVisibility(View.GONE);
+            findViewById(R.id.running3).setVisibility(View.GONE);
+        }
+    }
+
+    private void toggleSwimmingVisibility(int mode){
+        if(mode == 1){ // set visible
+            findViewById(R.id.swimming1).setVisibility(View.VISIBLE);
+            findViewById(R.id.swimming2).setVisibility(View.VISIBLE);
+            findViewById(R.id.swimming3).setVisibility(View.VISIBLE);
+            findViewById(R.id.swimming4).setVisibility(View.VISIBLE);
+        } else { // set invisible
+            findViewById(R.id.swimming1).setVisibility(View.GONE);
+            findViewById(R.id.swimming2).setVisibility(View.GONE);
+            findViewById(R.id.swimming3).setVisibility(View.GONE);
+            findViewById(R.id.swimming4).setVisibility(View.GONE);
+        }
+    }
+    private void toggleBasketballVisibility(int mode){
+        if(mode == 1){ // set visible
+            findViewById(R.id.basketball1).setVisibility(View.VISIBLE);
+            findViewById(R.id.basketball2).setVisibility(View.VISIBLE);
+            findViewById(R.id.basketball3).setVisibility(View.VISIBLE);
+            findViewById(R.id.basketball4).setVisibility(View.VISIBLE);
+        } else { // set invisible
+            findViewById(R.id.basketball1).setVisibility(View.GONE);
+            findViewById(R.id.basketball2).setVisibility(View.GONE);
+            findViewById(R.id.basketball3).setVisibility(View.GONE);
+            findViewById(R.id.basketball4).setVisibility(View.GONE);
         }
     }
 
@@ -193,10 +258,12 @@ public class CreateNewActivity extends AppCompatActivity {
             findViewById(R.id.chest1).setVisibility(View.VISIBLE);
             findViewById(R.id.chest2).setVisibility(View.VISIBLE);
             findViewById(R.id.chest3).setVisibility(View.VISIBLE);
+            findViewById(R.id.chest4).setVisibility(View.VISIBLE);
         } else { // set invisible
             findViewById(R.id.chest1).setVisibility(View.GONE);
             findViewById(R.id.chest2).setVisibility(View.GONE);
             findViewById(R.id.chest3).setVisibility(View.GONE);
+            findViewById(R.id.chest4).setVisibility(View.GONE);
         }
     }
 
@@ -205,10 +272,14 @@ public class CreateNewActivity extends AppCompatActivity {
             findViewById(R.id.legs1).setVisibility(View.VISIBLE);
             findViewById(R.id.legs2).setVisibility(View.VISIBLE);
             findViewById(R.id.legs3).setVisibility(View.VISIBLE);
+            findViewById(R.id.legs4).setVisibility(View.VISIBLE);
+            findViewById(R.id.legs5).setVisibility(View.VISIBLE);
         } else { // set invisible
             findViewById(R.id.legs1).setVisibility(View.GONE);
             findViewById(R.id.legs2).setVisibility(View.GONE);
             findViewById(R.id.legs3).setVisibility(View.GONE);
+            findViewById(R.id.legs4).setVisibility(View.GONE);
+            findViewById(R.id.legs5).setVisibility(View.GONE);
         }
     }
 
@@ -217,10 +288,12 @@ public class CreateNewActivity extends AppCompatActivity {
             findViewById(R.id.shoulders1).setVisibility(View.VISIBLE);
             findViewById(R.id.shoulders2).setVisibility(View.VISIBLE);
             findViewById(R.id.shoulders3).setVisibility(View.VISIBLE);
+            findViewById(R.id.shoulders4).setVisibility(View.VISIBLE);
         } else { // set invisible
             findViewById(R.id.shoulders1).setVisibility(View.GONE);
             findViewById(R.id.shoulders2).setVisibility(View.GONE);
             findViewById(R.id.shoulders3).setVisibility(View.GONE);
+            findViewById(R.id.shoulders4).setVisibility(View.GONE);
         }
     }
     private ArrayList<Exercise> getSelectedExercises(){
@@ -231,19 +304,25 @@ public class CreateNewActivity extends AppCompatActivity {
                 String name = boxes.get(i).getText().toString();
                 String type = "";
                 int image;
-                if(i >= 0 && i <= 4) {
+                if(i >= 0 && i <= 5) {
                     type = "Arms";
                     image = R.drawable.bicep_icon;
-                } else if(i >= 5 && i <= 7){
+                } else if(i >= 6 && i <= 9){
                     type = "Back";
                     image = R.drawable.back_icon;
-                } else if(i >= 8 && i <= 10){
-                    type = "Cardio";
+                } else if(i >= 10 && i <= 12){
+                    type = "Running";
                     image = R.drawable.cardio_icon;
-                } else if(i >= 11 && i <= 13){
+                } else if(i >= 13 && i <= 16){
+                    type = "Swimming";
+                    image = R.drawable.cardio_icon;
+                } else if(i >= 16 && i <= 19){
+                    type = "Basketball";
+                    image = R.drawable.cardio_icon;
+                } else if(i >= 20 && i <= 23){
                     type = "Chest";
                     image = R.drawable.chest_icon;
-                } else if(i >= 14 && i <= 16){
+                } else if(i >= 24 && i <= 28){
                     type = "Legs";
                     image = R.drawable.legs_icon;
                 } else {
@@ -264,21 +343,36 @@ public class CreateNewActivity extends AppCompatActivity {
         boxes.add((CheckBox)findViewById(R.id.arms3));
         boxes.add((CheckBox)findViewById(R.id.arms4));
         boxes.add((CheckBox)findViewById(R.id.arms5));
+        boxes.add((CheckBox)findViewById(R.id.arms5));
+        boxes.add((CheckBox)findViewById(R.id.arms6));
         boxes.add((CheckBox)findViewById(R.id.back1));
         boxes.add((CheckBox)findViewById(R.id.back2));
         boxes.add((CheckBox)findViewById(R.id.back3));
-        boxes.add((CheckBox)findViewById(R.id.cardio1));
-        boxes.add((CheckBox)findViewById(R.id.cardio2));
-        boxes.add((CheckBox)findViewById(R.id.cardio3));
+        boxes.add((CheckBox)findViewById(R.id.back4));
+        boxes.add((CheckBox)findViewById(R.id.running1));
+        boxes.add((CheckBox)findViewById(R.id.running2));
+        boxes.add((CheckBox)findViewById(R.id.running3));
+        boxes.add((CheckBox)findViewById(R.id.swimming1));
+        boxes.add((CheckBox)findViewById(R.id.swimming2));
+        boxes.add((CheckBox)findViewById(R.id.swimming3));
+        boxes.add((CheckBox)findViewById(R.id.swimming4));
+        boxes.add((CheckBox)findViewById(R.id.basketball1));
+        boxes.add((CheckBox)findViewById(R.id.basketball2));
+        boxes.add((CheckBox)findViewById(R.id.basketball3));
+        boxes.add((CheckBox)findViewById(R.id.basketball4));
         boxes.add((CheckBox)findViewById(R.id.chest1));
         boxes.add((CheckBox)findViewById(R.id.chest2));
         boxes.add((CheckBox)findViewById(R.id.chest3));
+        boxes.add((CheckBox)findViewById(R.id.chest4));
         boxes.add((CheckBox)findViewById(R.id.legs1));
         boxes.add((CheckBox)findViewById(R.id.legs2));
         boxes.add((CheckBox)findViewById(R.id.legs3));
+        boxes.add((CheckBox)findViewById(R.id.legs4));
+        boxes.add((CheckBox)findViewById(R.id.legs5));
         boxes.add((CheckBox)findViewById(R.id.shoulders1));
         boxes.add((CheckBox)findViewById(R.id.shoulders2));
         boxes.add((CheckBox)findViewById(R.id.shoulders3));
+        boxes.add((CheckBox)findViewById(R.id.shoulders4));
         return boxes;
     }
 }

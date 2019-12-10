@@ -4,13 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gonzaga_pic"
     android:orientation="vertical"
     tools:context=".ViewWorkoutActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:alpha="0.9"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:textSize="24dp" />
 
     <ListView
         android:id="@+id/exercisesList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.9"/>
 
     <Button
         android:id="@+id/backButton"

@@ -41,58 +41,100 @@ public class ExerciseOpenHelper extends SQLiteOpenHelper {
                 ", 'Hammer Curls', 'Arms', " + R.drawable.bicep_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Seated Dumbbell Press', 'Arms', " + R.drawable.bicep_icon + ")";
+                ", 'Isolation Bicep Curls', 'Arms', " + R.drawable.bicep_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
                 ", 'Skullcrusher', 'Arms', " + R.drawable.bicep_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Triceps Pushdown', 'Arms', " + R.drawable.bicep_icon + ")";
+                ", 'Triceps Dumbbell Rows', 'Arms', " + R.drawable.bicep_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Barbell Row', 'Back', " + R.drawable.back_icon + ")";
-        db.execSQL(sqlInsert);
-        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Chin Up', 'Back', " + R.drawable.back_icon + ")";
+                ", 'Tricep Dumbbell Extension', 'Arms', " + R.drawable.bicep_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
                 ", 'Deadlift', 'Back', " + R.drawable.back_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Indoor Track', 'Cardio', " + R.drawable.cardio_icon + ")";
+                ", 'Dumbbell Deadlift', 'Back', " + R.drawable.back_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Treadmill', 'Cardio', " + R.drawable.cardio_icon + ")";
+                ", 'Dumbbel Back Rows', 'Back', " + R.drawable.back_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Stationary Bike', 'Cardio', " + R.drawable.cardio_icon + ")";
+                ", 'Pull ups', 'Back', " + R.drawable.back_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Bench Press', 'Chest', " + R.drawable.chest_icon + ")";
+                ", 'Mile Intervals', 'Running', " + R.drawable.cardio_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Dumbbell Press', 'Chest', " + R.drawable.chest_icon + ")";
+                ", 'Timed Intervals', 'Running', " + R.drawable.cardio_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Incline Bench Press', 'Chest', " + R.drawable.chest_icon + ")";
+                ", 'Outdoor Run', 'Running', " + R.drawable.cardio_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Leg Press', 'Legs', " + R.drawable.legs_icon + ")";
+                ", 'Lap Intervals', 'Swimming', " + R.drawable.cardio_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Squats', 'Legs', " + R.drawable.legs_icon + ")";
+                ", 'Distance Intervals', 'Swimming', " + R.drawable.cardio_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Calf Raises', 'Legs', " + R.drawable.legs_icon + ")";
+                ", 'Speed Intervals', 'Swimming', " + R.drawable.cardio_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Shoulder Press', 'Shoulders', " + R.drawable.shoulder_icon + ")";
+                ", 'Stroke Intervals', 'Swimming', " + R.drawable.cardio_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
-                ", 'Barbell Row', 'Shoulders', " + R.drawable.shoulder_icon + ")";
+                ", 'Pickup Basketball', 'Basketball', " + R.drawable.cardio_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Shooting Session', 'Basketball', " + R.drawable.cardio_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Layup Drills', 'Basketball', " + R.drawable.cardio_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Dribble Work', 'Basketball', " + R.drawable.cardio_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Chest Bench', 'Chest', " + R.drawable.chest_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Chest Incline', 'Chest', " + R.drawable.chest_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Dumbbell Chest Bench', 'Chest', " + R.drawable.chest_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Dumbbell Chest Incline', 'Chest', " + R.drawable.chest_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Squat', 'Legs', " + R.drawable.legs_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Dumbbell Squat', 'Legs', " + R.drawable.legs_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Alternating Leg Squats', 'Legs', " + R.drawable.legs_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Hamstring Machine', 'Legs', " + R.drawable.legs_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Leg Press Machine', 'Legs', " + R.drawable.legs_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Dumbbell Shoulder Press', 'Shoulders', " + R.drawable.shoulder_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Upright Barbell Row', 'Shoulders', " + R.drawable.shoulder_icon + ")";
         db.execSQL(sqlInsert);
         sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
                 ", 'Side Lateral Raise', 'Shoulders', " + R.drawable.shoulder_icon + ")";
+        db.execSQL(sqlInsert);
+        sqlInsert = "INSERT INTO " + TABLE_EXERCISE + " VALUES(" + null +
+                ", 'Side Cable Raise', 'Shoulders', " + R.drawable.shoulder_icon + ")";
         db.execSQL(sqlInsert);
     }
 

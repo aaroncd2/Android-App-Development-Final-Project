@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/gonzaga_pic"
+    android:alpha=".9"
     tools:context=".HoursActivity">
 
     <TextView
@@ -27,6 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
+        android:background="@color/white"
+        android:alpha="0.9"
         android:textSize="24dp"
         android:gravity="center"
         android:text="POOL STATUS: "/>
@@ -37,7 +40,7 @@
         android:layout_height="match_parent"
         android:background="#444444"
         android:textColor="#FFFFFF"
-        android:alpha=".8"
+        android:alpha=".95"
         android:layout_margin="20dp"
         android:textSize="24dp"
         android:layout_gravity="center_horizontal" />
