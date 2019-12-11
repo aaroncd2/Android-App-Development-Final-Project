@@ -174,11 +174,17 @@ public class CreateNewActivity extends AppCompatActivity {
                     Toast.makeText(CreateNewActivity.this, "Please enter a title", Toast.LENGTH_SHORT).show();
                 } else {
                     ArrayList<Exercise> exercises =  getSelectedExercises();
-                    Intent intent = new Intent();
-                    intent.putExtra("Title", title);
-                    intent.putExtra("Exercises", exercises);
-                    setResult(1, intent);
-                    finish();
+                    if(!isValidName(title)) {
+                        Toast.makeText(CreateNewActivity.this, "Please remove (') from title", Toast.LENGTH_SHORT).show();
+                    } else if(exercises.size() == 0){
+                        Toast.makeText(CreateNewActivity.this, "Please select at least one workout", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Intent intent = new Intent();
+                        intent.putExtra("Title", title);
+                        intent.putExtra("Exercises", exercises);
+                        setResult(1, intent);
+                        finish();
+                    }
                 }
             }
         });
@@ -375,4 +381,15 @@ public class CreateNewActivity extends AppCompatActivity {
         boxes.add((CheckBox)findViewById(R.id.shoulders4));
         return boxes;
     }
+
+    private boolean isValidName(String title){
+        for(int i = 0; i < title.length(); i++){
+            if(title.charAt(i) == '\''){
+                return false;
+            }
+        }
+        return true;
+    }
 }
+
+
