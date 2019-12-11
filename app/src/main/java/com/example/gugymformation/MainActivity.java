@@ -21,23 +21,35 @@ package com.example.gugymformation;
 // https://www.gonzaga.edu/student-life/health-well-being/rudolf-fitness-center
 // https://www.gonzaga.edu/student-life/health-well-being/rudolf-fitness-center/aquatics
 // https://www.flickr.com/photos/gonzagauniversity/6190355946/
-
+//
+//Sources:
+//https://abhiandroid.com/androidstudio/add-audio-android-studio.html
+//
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
+public class MainActivity extends AppCompatActivity {
+    private MediaPlayer mp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mp = MediaPlayer.create(this, R.raw.winter);
+        mp.start();
+        mp.setLooping(true);
 
         Button hoursButton = (Button) findViewById(R.id.hoursButton);
         hoursButton.setOnClickListener(new View.OnClickListener() {
@@ -66,5 +78,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1){
+            mp.start();
+            mp.setLooping(true);
+        }
     }
 }
